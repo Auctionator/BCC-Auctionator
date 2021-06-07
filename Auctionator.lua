@@ -273,12 +273,6 @@ end
 local function IsCataEnchanter()
   Auctionator.Debug.Message( 'IsCataEnchanter' )
 
-  local prof1, prof2 = GetProfessions()
-
-  if (IsCataEnchanting (prof1) or IsCataEnchanting (prof2)) then
-    return true
-  end
-
   return false
 end
 
@@ -2668,7 +2662,7 @@ function Atr_HideRecTooltip ()
 
   gCurrentPane.tooltipvisible = nil;
   GameTooltip:Hide();
-  BattlePetTooltip:Hide();
+  --BattlePetTooltip:Hide();
 
 end
 
@@ -3502,7 +3496,7 @@ function Atr_HideLineTooltip (self)
   Auctionator.Debug.Message( 'Atr_HideLineTooltip', self )
 
   GameTooltip:Hide();
-  BattlePetTooltip:Hide();
+  --BattlePetTooltip:Hide();
 end
 
 
