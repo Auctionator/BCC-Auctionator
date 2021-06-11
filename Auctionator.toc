@@ -1,6 +1,6 @@
-## Interface: 80200
+## Interface: 20501
 ## Title: Auctionator
-## Version: 8.2.0
+## Version: 2.5.1
 ## Author: Borjamacare, Zirco
 ## X-Website: http://mods.curse.com/addons/wow/auctionator
 ## X-Localizations: enUS, itIT, deDE, ruRU, svSE, frFR, esES, zhTW
