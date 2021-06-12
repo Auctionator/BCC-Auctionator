@@ -628,20 +628,19 @@ local function Atr_OnClickTradeSkillBut()
 
   Atr_SelectPane (BUY_TAB);
 
-  local index = TradeSkillFrame.RecipeList:GetSelectedRecipeID()
+  local index = GetTradeSkillSelectionIndex()
 
-
-  local link = C_TradeSkillUI.GetRecipeItemLink(index)
+  local link = GetTradeSkillItemLink(index)
 
   local _, _, _, _, _, itemType = GetItemInfo (link);
 
-  local numReagents = C_TradeSkillUI.GetRecipeNumReagents(index)
+  local numReagents = GetTradeSkillNumReagents(index)
 
   local reagentId
 
   local shoppingListName = GetItemInfo (link)
   if (shoppingListName == nil) then
-    shoppingListName = C_TradeSkillUI.GetRecipeInfo(index).name
+    shoppingListName = GetTradeSkillLine()
   end
 
   local items = {}
@@ -651,7 +650,7 @@ local function Atr_OnClickTradeSkillBut()
   end
 
   for reagentId = 1, numReagents do
-    local reagentName = C_TradeSkillUI.GetRecipeReagentInfo(index, reagentId)
+    local reagentName = GetTradeSkillReagentInfo(index, reagentId)
     if (reagentName and not zc.StringSame(reagentName, "Crystal Vial")) then
       table.insert (items, reagentName)
     end
@@ -673,7 +672,6 @@ local function Atr_ModTradeSkillFrame()
     gTradeSkillFrameModded = true
 
     local button = CreateFrame("BUTTON", "Auctionator_Search", TradeSkillFrame, "UIPanelButtonTemplate");
-    print(TradeSkillDetailScrollFrame, "p")
     button:SetPoint("TOPRIGHT", "TradeSkillDetailScrollFrame", "TOPRIGHT", 0, -22);
 
     button:SetHeight (20)
