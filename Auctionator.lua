@@ -817,7 +817,7 @@ function Atr_OnLoad()
     Atr_StackingPrefs_Init();
   end
 
-  if (AUCTIONATOR_SAVEDVARS == nil) then
+  if (AUCTIONATOR_SAVEDVARS == nil) or Atr_IsAnyMissingSavedVars() then
     Atr_ResetSavedVars()
   end
 
@@ -1234,6 +1234,15 @@ function Atr_GetSellItemInfo ()
 end
 
 -----------------------------------------
+
+function Atr_IsAnyMissingSavedVars ()
+  for key, value in pairs(auctionator_savedvars_defaults) do
+    if AUCTIONATOR_SAVEDVARS[key] == nil then
+      return true
+    end
+  end
+  return false
+end
 
 function Atr_ResetSavedVars ()
   Auctionator.Debug.Message( 'Atr_ResetSavedVars' )
