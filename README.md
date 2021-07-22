@@ -5,7 +5,7 @@
 
 
 This version of Auctionator for World of Warcraft Burning Crusade Classic is based off the pre-8.3 rewrite Auctionator
-(before the AH changes). This version will be updated so it keeps working with BCC, but will not have any new features.
+(before the AH changes).
 
 Auctionator is a World of Warcraft addon designed for casual auction house users with the goal of improving usability.
 This addon organizes auction listings logically by prices and stack size for easy purchasing.
