@@ -235,7 +235,7 @@
           <Layer level="ARTWORK">
 
             <FontString inherits="GameFontHighlightSmall" text="CREATE_AUCTION">
-              <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="83" y="18"/></Offset></Anchor></Anchors>
+              <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="67" y="20"/></Offset></Anchor></Anchors>
             </FontString>
 
             <FontString name="Atr_StackPriceText" inherits="GameFontHighlightSmall" text="Buyout Price">
