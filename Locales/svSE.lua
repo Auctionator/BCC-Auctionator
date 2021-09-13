@@ -18,6 +18,7 @@ AtrL["SCAN_EXPLANATION"] = "Att skanna Auktionshuset skapar en databas av priser
 
 -- New Vars
 --- Globals
+AUCTIONATOR_L_COPY_TEXT = "Copy Text"
 AUCTIONATOR_SELL_TAB_TEXT = "Sell"
 AUCTIONATOR_AUCTION_DURATION = "Default Auction Duration"
 AUCTIONATOR_DEFAULT_AUCTIONATOR_TAB = "Default Auctionator tab"

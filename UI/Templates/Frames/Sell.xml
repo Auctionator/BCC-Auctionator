@@ -520,6 +520,14 @@
         </Scripts>
       </Button>
 
+      <Button name="Atr_ExportCSV_Button" text="Export Results" inherits="UIPanelButtonTemplate" >
+        <Size><AbsDimension x="90" y="22"/> </Size>
+        <Anchors><Anchor point="RIGHT" relativeTo="Atr_Buy1_Button" relativePoint="LEFT"><Offset><AbsDimension x="4" y="0"/></Offset></Anchor></Anchors>
+        <Scripts>
+          <OnClick>Atr_ExportCSV_Onclick()</OnClick>
+        </Scripts>
+      </Button>
+
       <ScrollFrame name="AuctionatorScrollFrame" inherits="FauxScrollFrameTemplate">
         <Size><AbsDimension x="588" y="196"/></Size>
         <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="0" y="-213"/></Offset></Anchor></Anchors>

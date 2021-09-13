@@ -48,6 +48,7 @@ AUCTIONATOR_AUCTIONS_SCANNED = "Ventes scannées :"
 AUCTIONATOR_ITEMS_ADDED = "Objets ajoutés :"
 AUCTIONATOR_ITEMS_UPDATED = "Objets mis à jour :"
 AUCTIONATOR_ITEMS_IGNORED = "Objets ignorés :"
+AUCTIONATOR_L_COPY_TEXT = "Copy Text"
 --- End Globals
 AtrL["AH"] = "HV"
 AtrL["%A, %B %d at %I:%M %p"] = "%d/%m/%Y à %H:%M" -- Date and Time. Refer to https://www.lua.org/pil/22.1.html

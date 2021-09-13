@@ -2734,6 +2734,7 @@ function Atr_HideAllDialogs()
   Atr_Error_Frame:Hide();
   Atr_Buy_Confirm_Frame:Hide();
   Atr_FullScanFrame:Hide();
+  Atr_ExportCSV_Dialog:Hide();
   Atr_Adv_Search_Dialog:Hide();
   Atr_Mask:Hide();
   Atr_SList_Conflict_Frame:Hide()
@@ -3557,6 +3558,7 @@ function Atr_ShowSearchSummary()
   Atr_Col1_Heading_Button:Show();
   Atr_Col3_Heading_Button:Show();
   Atr_Col4_Heading:Show();
+  Atr_ExportCSV_Button:Enable()
 
   gCurrentPane.activeSearch:UpdateArrows ();
 
@@ -3683,6 +3685,7 @@ function Atr_ShowCurrentAuctions()
   Atr_Col4_Heading:Hide()
   Atr_Col1_Heading_Button:Hide()
   Atr_Col3_Heading_Button:Hide()
+  Atr_ExportCSV_Button:Disable()
 
   local scn = gCurrentPane.activeScan
   if (scn == nil) then
@@ -5252,3 +5255,24 @@ function FromTightTime(tt)
 
 end
 
+function Atr_ExportCSV_Onclick()
+  Auctionator.Debug.Message( 'Atr_CancelSelection_OnClick' )
+
+  if not Atr_IsSelectedTab_Current() or not Atr_ShowingSearchSummary() then
+    return;
+  end
+
+  local scan = Atr_GetCurrentPane().activeSearch.sortedScans;
+
+  if scan == nil then
+    return
+  end
+
+  local export = "Price,Name,Available\n"
+  for _, data in ipairs(scan) do
+    export = export .. tostring(data.lowprice) .. "," .. data.itemName .. "," .. data:GetNumAvailable() .. "\n"
+  end
+  Atr_ExportCSV_Dialog.ScrollFrame.ExportString:SetText(export)
+  Atr_ExportCSV_Dialog.ScrollFrame.ExportString:HighlightText()
+  Atr_ExportCSV_Dialog:Show()
+end

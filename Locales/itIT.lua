@@ -17,6 +17,7 @@ AtrL["SCAN_EXPLANATION"] =  "<br/>"
 
 -- New Vars
 --- Globals
+AUCTIONATOR_L_COPY_TEXT = "Copy Text"
 AUCTIONATOR_SELL_TAB_TEXT = "Vendi" -- "Sell"
 AUCTIONATOR_AUCTION_DURATION = "Durata Predefinita Asta" -- "Default Auction Duration"
 AUCTIONATOR_DEFAULT_AUCTIONATOR_TAB = "Scheda Predefinita" -- "Default Auctionator tab"
