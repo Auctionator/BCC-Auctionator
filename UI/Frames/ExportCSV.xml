@@ -1,0 +1,54 @@
+<Ui>
+  <Frame
+    name="Atr_ExportCSV_Dialog"
+    inherits="AuctionatorDialog"
+    frameStrata="Dialog"
+    enableMouse="true"
+    hidden="true"
+  >
+    <Size x="350" y="320" />
+    <Frames>
+      <ScrollFrame parentKey="ScrollFrame" inherits="UIPanelScrollFrameTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" x="15" y="-40"/>
+          <Anchor point="BOTTOMRIGHT" x="-35" y="40"/>
+        </Anchors>
+        <Scripts>
+          <OnLoad inherit="append">
+            self.ExportString:SetWidth(300)
+          </OnLoad>
+        </Scripts>
+        <ScrollChild>
+          <EditBox autoFocus="false" multiLine="true" parentKey="ExportString">
+            <FontString inherits="ChatFontNormal" justifyH="LEFT"/>
+            <Scripts>
+              <OnEscapePressed>self:ClearFocus()</OnEscapePressed>
+            </Scripts>
+          </EditBox>
+        </ScrollChild>
+      </ScrollFrame>
+
+      <!-- Action Buttons -->
+      <Button parentKey="Close" inherits="UIPanelDynamicResizeButtonTemplate" text="Close">
+        <Anchors>
+          <Anchor point="BOTTOMRIGHT" x="-20" y="15"/>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            self:GetParent():Hide()
+          </OnClick>
+        </Scripts>
+      </Button>
+    </Frames>
+
+    <Layers>
+      <Layer>
+        <FontString text="AUCTIONATOR_L_COPY_TEXT" inherits="GameFontHighlight">
+          <Anchors>
+            <Anchor point="TOP" y="-15"/>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+  </Frame>
+</Ui>

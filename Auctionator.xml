@@ -33,4 +33,5 @@
   <Include file="UI/Frames/CancelAuctionConfirmation.xml" />
   <Include file="UI/Frames/FullScan.xml" />
   <Include file="UI/Frames/AdvancedSearchDialog.xml" />
+  <Include file="UI/Frames/ExportCSV.xml" />
 </Ui>
